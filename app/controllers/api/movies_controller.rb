@@ -1,8 +1,8 @@
 class Api::MoviesController < ApplicationController
 
-  def all_movies_action
+  def index
     @movies = Movie.all
-    render "all_movies.json.jb"
+    render "index.json.jb"
   end
 
 end

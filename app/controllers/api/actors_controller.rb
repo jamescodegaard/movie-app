@@ -1,8 +1,8 @@
 class Api::ActorsController < ApplicationController
 
-  def one_actor_action
+  def show
     @actor = Actor.first
-    render "one_actor.json.jb"
+    render "show.json.jb"
   end
 
 end
