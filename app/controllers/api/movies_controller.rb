@@ -13,8 +13,11 @@ class Api::MoviesController < ApplicationController
       director: params[:director],
       english: params[:english]
     )
-    @movie.save
-    render "show.json.jb"
+    if @movie.save #happy
+      render 'show.json.jb'
+    else #sad
+      render json: {error: @movie.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -29,8 +32,11 @@ class Api::MoviesController < ApplicationController
     @movie.plot = params[:plot] || @movie.plot
     @movie.director = params[:director] || @movie.director
     @movie.english = params[:english] || @movie.english
-    @movie.save
-    render "show.json.jb"
+    if @movie.save #happy
+      render 'show.json.jb'
+    else #sad
+      render json: {error: @movie.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
