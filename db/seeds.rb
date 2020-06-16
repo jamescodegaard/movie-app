@@ -20,3 +20,26 @@
 
 # new_movie = Movie.new(title: "Gladiator", year: 2000, plot: "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery. -IMDB Description")
 # new_movie.save
+
+genres = Genre.create([
+  { name: 'Comedy' }, 
+  { name: 'Horror' }, 
+  { name: 'Thriller' }, 
+  { name: 'Action' }, 
+  { name: 'Romantic Comedy'},
+  { name: 'SciFi'},
+  { name: 'Drama'}
+  ])
+
+movie_genres = MovieGenre.create([
+  { movie_id: 1, genre_id: 1}, 
+  { movie_id: 2, genre_id: 6}, 
+  { movie_id: 3, genre_id: 3}, 
+  { movie_id: 4, genre_id: 2}, 
+  { movie_id: 4, genre_id: 3},
+  { movie_id: 6, genre_id: 3},
+  { movie_id: 8, genre_id: 1},
+  { movie_id: 9, genre_id: 5},
+  { movie_id: 11, genre_id: 2},
+  { movie_id: 10, genre_id: 7}
+  ])
