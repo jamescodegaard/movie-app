@@ -1,0 +1,4 @@
+{
+  movie: @movie_genre.movie,
+  genre: @movie_genre.genre
+}
