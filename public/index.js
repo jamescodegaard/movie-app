@@ -1,6 +1,6 @@
 /* global axios */
 
-axios.get("http://localhost:3000/api/actors").then(function (response) {
+axios.get("https://true-beaver-74732.herokuapp.com/api/actors").then(function (response) {
   var actors = response.data;
   console.log(actors);
 });

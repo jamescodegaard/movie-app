@@ -1,5 +1,5 @@
 require "http"
 
-response = HTTP.get "http://localhost:3000/api/movies"
+response = HTTP.get "https://true-beaver-74732.herokuapp.com/api/movies"
 
 pp response.parse
